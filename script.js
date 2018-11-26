@@ -1,9 +1,9 @@
 // Selectors
-var decimal = document.getElementById("decimal");
-var clear = document.getElementById("clear");
-var displayValElement = document.getElementById("display__numbers");
-var btnNumbers = document.getElementsByClassName("btn--number");
-var btnOperators = document.getElementsByClassName("btn--operator");
+const decimal = document.getElementById("decimal");
+const clear = document.getElementById("clear");
+const displayValElement = document.getElementById("display__numbers");
+const btnNumbers = document.getElementsByClassName("btn--number");
+const btnOperators = document.getElementsByClassName("btn--operator");
 
 // Value that is being shown. The default value is 0. The eval() method will take a string and run it. Our array will hold the buttons we are clicking, and we will later convert it to a string.
 var displayVal = '0';
@@ -11,7 +11,7 @@ var pendingVal;
 var evalStringArray = []; 
   
 // Updating the display field. If the value is currently equal to 0, we will reset the value so that our input does not start with a 0.
-function updateDisplayVal(e) {
+updateDisplayVal = (e) => {
     var btnText = e.target.innerText;
     if(displayVal === "0") { 
       displayVal = ""; 
@@ -23,7 +23,7 @@ function updateDisplayVal(e) {
 } 
 
 // Perform the mathematical operations
-function performOperation(e) {
+performOperation = (e) => {
   var operator = e.target.innerText;  
   
     switch (operator) {
